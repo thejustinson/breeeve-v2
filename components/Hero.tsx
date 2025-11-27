@@ -38,13 +38,13 @@ const Hero = () => {
             <div className="w-full text-center flex flex-col items-center relative z-10">
                 {/* Animated Heading */}
                 <motion.h1
-                    className="font-sans text-4xl md:text-7xl max-w-[300px] md:max-w-[650px] mx-auto font-bold"
+                    className="font-sans text-[42px] md:text-7xl max-w-[350px] md:max-w-[650px] mx-auto font-bold"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     Manage your{" "}
-                    <span className="font-serif italic font-normal inline-block relative">
+                    <span className="font-serif italic font-normal inline-block relative -rotate-1">
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={currentWordIndex}
@@ -63,7 +63,7 @@ const Hero = () => {
 
                 {/* Animated Description */}
                 <motion.p
-                    className="text-lg max-w-[300px] md:max-w-lg mx-auto mt-5 text-gray-500"
+                    className="text-base md:text-lg max-w-[350px] md:max-w-lg mx-auto mt-5 text-gray-500"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
