@@ -38,8 +38,8 @@ export const Navigation = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <Link href="/pricing" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Pricing</Link>
         <Link href="/features" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Features</Link>
+        <Link href="/pricing" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Pricing</Link>
         <Link href="/contact" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Contact</Link>
       </motion.div>
 
@@ -171,13 +171,13 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               exit="closed"
             >
               <motion.div variants={itemVariants}>
-                <Link href="/pricing" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors block" onClick={onClose}>
-                  Pricing
+                <Link href="/features" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors block" onClick={onClose}>
+                  Features
                 </Link>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <Link href="/features" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors block" onClick={onClose}>
-                  Features
+                <Link href="/pricing" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors block" onClick={onClose}>
+                  Pricing
                 </Link>
               </motion.div>
               <motion.div variants={itemVariants}>
