@@ -4,7 +4,14 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 
 const Hero = () => {
-    const words = ["business", "clients", "orders", "expenses", "payments", "reports"]
+    const words = [
+        { text: "business", color: "text-primary" },
+        { text: "clients", color: "text-amber-600" },
+        { text: "orders", color: "text-blue-600" },
+        { text: "expenses", color: "text-orange-600" },
+        { text: "payments", color: "text-green-600" },
+        { text: "reports", color: "text-red-500" }
+    ]
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
 
     useEffect(() => {
@@ -31,13 +38,13 @@ const Hero = () => {
             <div className="w-full text-center flex flex-col items-center relative z-10">
                 {/* Animated Heading */}
                 <motion.h1
-                    className="font-sans text-4xl md:text-7xl max-w-[650px] mx-auto font-bold"
+                    className="font-sans text-4xl md:text-7xl max-w-[300px] md:max-w-[650px] mx-auto font-bold"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     Manage your{" "}
-                    <span className="font-serif italic text-primary font-normal inline-block relative">
+                    <span className="font-serif italic font-normal inline-block relative">
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={currentWordIndex}
@@ -45,9 +52,9 @@ const Hero = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: -20, opacity: 0 }}
                                 transition={{ duration: 0.5 }}
-                                className="inline-block"
+                                className={`inline-block ${words[currentWordIndex].color}`}
                             >
-                                {words[currentWordIndex]}
+                                {words[currentWordIndex].text}
                             </motion.span>
                         </AnimatePresence>
                     </span>{" "}
@@ -56,7 +63,7 @@ const Hero = () => {
 
                 {/* Animated Description */}
                 <motion.p
-                    className="text-lg max-w-xl mx-auto mt-5 text-gray-500"
+                    className="text-lg max-w-[300px] md:max-w-lg mx-auto mt-5 text-gray-500"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
