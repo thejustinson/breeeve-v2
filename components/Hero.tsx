@@ -22,7 +22,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className="px-5 md:px-10 py-20 relative overflow-hidden h-[calc(100vh-64px)] flex items-center">
+        <div className="px-5 md:px-10 py-20 relative overflow-hidden h-screen flex items-center">
             {/* Pattern Background */}
             <div className="absolute inset-0 -z-10 opacity-30">
                 <svg width="100%" height="100%">

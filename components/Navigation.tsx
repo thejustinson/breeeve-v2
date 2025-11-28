@@ -10,7 +10,7 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="flex justify-between px-5 md:px-10 py-5 font-sans relative">
+    <nav className="bg-white flex justify-between px-5 md:px-10 py-5 font-sans fixed top-0 left-0 right-0 z-50">
       <motion.div
         className="flex items-center gap-2"
         initial={{ opacity: 0, x: -20 }}
@@ -40,7 +40,7 @@ export const Navigation = () => {
       >
         <Link href="#features" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Features</Link>
         <Link href="#pricing" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Pricing</Link>
-        <Link href="#contact" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Contact</Link>
+        <Link href="#contact" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors">Contact Us</Link>
       </motion.div>
 
       <motion.div
@@ -182,7 +182,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               </motion.div>
               <motion.div variants={itemVariants}>
                 <Link href="#contact" className="px-4 py-2 rounded hover:bg-gray-100 transition-colors block" onClick={onClose}>
-                  Contact
+                  Contact Us
                 </Link>
               </motion.div>
             </motion.div>
