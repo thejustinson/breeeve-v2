@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display, Asta_Sans } from "next/font/google";
+import { DM_Serif_Display, Asta_Sans } from "next/font/google";
 import "./globals.css";
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
+import Providers from "@/providers/PrivyProvider";
 
 const dmSerif = DM_Serif_Display({
   weight: "400",
@@ -35,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en",
     siteName: "Breeeve",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -46,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSerif.variable} ${astaSans.variable} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -62,9 +62,9 @@ const FAQ = () => {
             category: "Pricing"
         },
         {
-            question: "Does Breeeve support payments?",
+            question: "Does Breeeve support payment checkouts?",
             answer: "Yes, but it's optional. You can choose to receive Naira or USDC payments through Breeeve checkout when you're ready.",
-            category: "Pricing"
+            category: "Features"
         }
     ]
 
@@ -84,10 +84,10 @@ const FAQ = () => {
                 className="text-center mb-12"
             >
                 <h1 className="font-serif italic text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Frequently asked questions
+                    Got Questions?
                 </h1>
                 <p className="text-gray-600 text-lg">
-                    These are the most commonly asked questions about Breeeve.
+                    We've put together the answers to some questions you might have.
                 </p>
             </motion.div>
 
@@ -107,7 +107,7 @@ const FAQ = () => {
                             setOpenIndex(null)
                         }}
                         className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeTab === tab
-                                ? "bg-gray-900 text-white"
+                                ? "bg-primary text-white"
                                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                             }`}
                     >

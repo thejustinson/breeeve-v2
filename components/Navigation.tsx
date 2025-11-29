@@ -1,10 +1,10 @@
 "use client"
 
 import { RiCloseLine, RiMenu3Line } from "@remixicon/react"
-import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Logo from "./Logo"
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,19 +17,7 @@ export const Navigation = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src={'/logo-no-bg.png'}
-            alt="Logo"
-            width={100}
-            height={100}
-            className="w-10"
-          />
-          <div className="flex flex-col text-lg leading-none font-bold">
-            <span className="text-primary">Breeeve</span>
-            <span className="text-gray-500 text-xs">dotcom</span>
-          </div>
-        </Link>
+        <Logo />
       </motion.div>
 
       <motion.div
